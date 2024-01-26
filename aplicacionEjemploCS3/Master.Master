@@ -26,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="PokemonLista.aspx">Listado Pokemon</a>
                         </li>
+                        <li><a class="nav-link" href="Login.aspx">Login</a></li>
+                        <li><a class="nav-link" href="Contacto.aspx">Envio de email</a></li>
+                        
                     </ul>
                 </div>
             </div>
