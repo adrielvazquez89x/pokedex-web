@@ -18,29 +18,46 @@ namespace aplicacionEjemploCS3
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuario usuario;
-            UsuarioNegocio negocio = new UsuarioNegocio();
+            //   Usuario usuario;
+            // UsuarioNegocio negocio = new UsuarioNegocio();
+
+            Trainee trainee = new Trainee();
+            TraineeNegocio negocio = new TraineeNegocio();
             try
             {
-                usuario = new Usuario(txtUsername.Text, txtPassword.Text, false);
-                if (negocio.Loguear(usuario))
+                trainee.Email = txtUsername.Text;
+                trainee.Pass = txtPassword.Text;
+                if(negocio.Login(trainee) )
                 {
-                    Session.Add("usuario", usuario);
-                    Response.Redirect("PanelUser.aspx");
-
+                    Session.Add("trainee", trainee);
+                    Response.Redirect("MiPerfil.aspx", false );
                 }
                 else
                 {
-                    Session.Add("error", "user o pass incorrectos");
-                    Response.Redirect("Error.aspx", false);
+                    Session.Add("error", "User o pass incorrectos");
+                    Response.Redirect("Error.aspx");
                 }
 
-                
+                /*    usuario = new Usuario(txtUsername.Text, txtPassword.Text, false);
+                    if (negocio.Loguear(usuario))
+                    {
+                        Session.Add("usuario", usuario);
+                        Response.Redirect("PanelUser.aspx");
+
+                    }
+                    else
+                    {
+                        Session.Add("error", "user o pass incorrectos");
+                        Response.Redirect("Error.aspx", false);
+                    }
+                */
+
             }
             catch (Exception ex)
             {
                 Session.Add("error", ex);
-                throw;
+                Response.Redirect("Error.aspx");
+               
             }
         }
     }

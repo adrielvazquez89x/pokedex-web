@@ -26,13 +26,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="PokemonLista.aspx">Listado Pokemon</a>
                         </li>
-                        <li><a class="nav-link" href="Login.aspx">Login</a></li>
-                        <li><a class="nav-link" href="Contacto.aspx">Envio de email</a></li>
-                        
+                        <li><a class="nav-link" href="Contacto.aspx">Envio de email (no funca)</a></li>
+                        <li><a class="nav-link" href="Favoritos.aspx">Favoritos</a></li>
+                        <li><a class="nav-link" href="MiPerfil.aspx">Mi Perfil</a></li>
                     </ul>
+                    <div class="ms-auto">
+                        <a class="btn btn-success" href="Login.aspx">Login</a>
+                        <a class="btn btn-outline-primary" href="Registro.aspx">Registrarse</a>
+                        <img src="#" alt="" />
+                    </div>
                 </div>
             </div>
         </nav>
+
         <div class="container">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

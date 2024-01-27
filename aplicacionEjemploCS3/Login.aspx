@@ -4,6 +4,25 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <div class="container login-container">
+        <div class="login-header">
+            <h2>Login</h2>
+        </div>
+        <div class="login-form">
+            <div class="form-group">
+                <label for="txtUsername">Username:</label>
+                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="txtPassword">Password:</label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary login-btn" OnClick="btnLogin_Click" />
+            </div>
+        </div>
+    </div>
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -35,23 +54,4 @@
             width: 100%;
         }
     </style>
-
-    <div class="container login-container">
-        <div class="login-header">
-            <h2>Login</h2>
-        </div>
-        <div class="login-form">
-            <div class="form-group">
-                <label for="txtUsername">Username:</label>
-                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <label for="txtPassword">Password:</label>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary login-btn" OnClick="btnLogin_Click" />
-            </div>
-        </div>
-    </div>
 </asp:Content>
